@@ -89,11 +89,11 @@
                     </div>
 					<BR><BR>
 					<div class="intro-text">
-<form class="form-inline" role="form" id="textForm" name="textForm">
+<form class="form-inline" role="form" id="textForm" name="textForm" onsubmit="return false;">
   <div class="form-group">
-    <input type="phone" class="form-control" id="phone" placeholder="xxx-xxx-xxxx" style="max-width: 120px" style="text-align: center">
+    <input type="phone" class="form-control" id="phone" placeholder="xxx-xxx-xxxx" style="max-width: 120px" style="text-align: center" on>
   </div>
-  <button type="submit" class="btn btn-default btn-outline" style="margin-top:0px; color: white;" onclick="javascript: sendDownloadLink()">Text me the iTunes Podcast link</button>
+  <button type="submit" class="btn btn-default btn-outline" style="margin-top:0px; color: white;" onclick="javascript: sendDownloadLink();">Text me the iTunes Podcast link</button>
 </form>
 
 
@@ -412,6 +412,15 @@
 			} else {
 				$("#textForm").show();			
 			}
+			
+			$('.my-form').on('submit', function () {
+				alert("this thing running");
+				sendDownloadLink();
+			    return false;
+			});
+			
+			
+			
 		});		
 		//send user the download link
 		function sendDownloadLink(){
