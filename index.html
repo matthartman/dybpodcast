@@ -94,9 +94,6 @@
   </div>
   <button type="submit" class="btn btn-default btn-outline" style="margin-top:0px;" onclick="javascript: sendDownloadLink()">Text me the iTunes Podcast link</button>
 </form>
-  <div id="mobile_subscribe_button" name="mobile_subscribe_button">
-  <a href="http://bit.ly/dybpodcast_apple" target="_blank" type="submit" class="btn btn-default btn-outline" style="margin-top:0px;">Subscribe</a>
-</div>
 
 
 <BR><BR>
@@ -411,9 +408,7 @@
 		$(document).ready(function() {
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				$("#textForm").hide();
-				$("#mobile_subscribe_button").show();
 			} else {
-				$("#mobile_subscribe_button").hide();
 				$("#textForm").show();			
 			}
 		});		
